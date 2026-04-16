@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Base */
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #ffffff;
+  color: #1f2937;
+}
+
+/* Hero Glow */
+.hero-bg {
+  background: radial-gradient(circle at top right, rgba(0,150,255,0.15), transparent 40%),
+              radial-gradient(circle at bottom left, rgba(255,140,0,0.15), transparent 40%);
+}
+
+/* Cards */
+.card-base {
+  @apply rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-300;
+}
+
+.card-base:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+}
+
+/* 🔥 INPUT STYLE (NEW - IMPORTANT) */
+.input-style {
+  @apply w-full rounded-xl border border-gray-200 bg-white px-4 py-3 text-sm shadow-sm 
+  outline-none transition-all duration-300;
+
+  @apply focus:border-teal-500 focus:ring-2 focus:ring-teal-200 focus:shadow-md;
+
+  @apply hover:border-gray-300 placeholder:text-gray-400;
+}
+
+/* 🔥 TEXTAREA FIX */
+textarea.input-style {
+  @apply resize-none;
+}
+
+/* Button */
+.gradient-button {
+  @apply inline-flex items-center justify-center rounded-full 
+  bg-gradient-to-r from-teal-500 to-orange-500 
+  px-6 py-3 font-semibold text-white shadow-lg transition;
+}
+
+.gradient-button:hover {
+  transform: scale(1.05);
+}
